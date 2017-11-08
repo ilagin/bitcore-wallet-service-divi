@@ -33,7 +33,6 @@ BWS is composed of 5 separate node services -
 Locker - locker/locker.js
 Message Broker - messagebroker/messagebroker.js
 Blockchain Monitor - bcmonitor/bcmonitor.js (This service talks to the Blockchain Explorer service configured under blockchainExplorerOpts - see Configure blockchain service below.)
-Email Service - emailservice/emailservice.js
 Bitcore Wallet Service - bws.js
 
 #### Configure MongoDB
@@ -82,18 +81,6 @@ An example of this configuration is:
   }
 ```
 
-#### Configure Email service
-Example configuration for connecting to email service (using postfix):
-```javascript
-  emailOpts: {
-    host: 'localhost',
-    port: 25,
-    ignoreTLS: true,
-    subjectPrefix: '[Wallet Service]',
-    from: 'wallet-service@bitcore.io',
-  }
-```
-
 #### Enable clustering
 Change `config.js` file to enable and configure clustering:
 ```javascript
@@ -102,4 +89,3 @@ Change `config.js` file to enable and configure clustering:
   clusterInstances: 4,
 }
 ```
-

@@ -11,7 +11,6 @@ var bitcore = require('bitcore-lib-dash');
 var Networks = bitcore.Networks;
 var Locker = require('locker-server');
 var BlockchainMonitor = require('../lib/blockchainmonitor');
-var EmailService = require('../lib/emailservice');
 var ExpressApp = require('../lib/expressapp');
 var child_process = require('child_process');
 var spawn = child_process.spawn;
@@ -158,13 +157,7 @@ Service.prototype.start = function(done) {
       blockChainMonitor.start(config, next);
     },
     function(next) {
-      // Email Service
-      if (config.emailOpts) {
-        var emailService = new EmailService();
-        emailService.start(config, next);
-      } else {
-        setImmediate(next);
-      }
+      setImmediate(next);
     },
     function(next) {
       self._startWalletService(config, next);

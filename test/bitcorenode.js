@@ -258,11 +258,8 @@ describe('Bitcore Node Service', function() {
       TestBlockchainMonitor.prototype.start = sinon.stub().callsArgWith(1, new Error('test'));
       function TestLocker() {}
       TestLocker.prototype.listen = sinon.stub();
-      function TestEmailService() {}
-      TestEmailService.prototype.start = sinon.stub();
       var TestService = proxyquire('../bitcorenode', {
         '../lib/blockchainmonitor': TestBlockchainMonitor,
-        '../lib/emailservice': TestEmailService,
         'socket.io': sinon.stub().returns({
           on: sinon.stub()
         }),
@@ -274,36 +271,6 @@ describe('Bitcore Node Service', function() {
       var service = new TestService(options);
       var config = {};
       service._getConfiguration = sinon.stub().returns(config);
-      service._startWalletService = sinon.stub().callsArg(1);
-      service.start(function(err) {
-        err.message.should.equal('test');
-        done();
-      });
-    });
-    it('error from email service', function(done) {
-      var app = {};
-      function TestBlockchainMonitor() {}
-      TestBlockchainMonitor.prototype.start = sinon.stub().callsArg(1);
-      function TestLocker() {}
-      TestLocker.prototype.listen = sinon.stub();
-      function TestEmailService() {}
-      TestEmailService.prototype.start = sinon.stub().callsArgWith(1, new Error('test'));
-      var TestService = proxyquire('../bitcorenode', {
-        '../lib/blockchainmonitor': TestBlockchainMonitor,
-        '../lib/emailservice': TestEmailService,
-        'socket.io': sinon.stub().returns({
-          on: sinon.stub()
-        }),
-        'locker-server': TestLocker,
-      });
-      var options = {
-        node: {}
-      };
-      var service = new TestService(options);
-      service._getConfiguration = sinon.stub().returns({
-        emailOpts: {}
-      });
-      var config = {};
       service._startWalletService = sinon.stub().callsArg(1);
       service.start(function(err) {
         err.message.should.equal('test');
