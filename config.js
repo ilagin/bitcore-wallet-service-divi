@@ -38,25 +38,23 @@ var config = {
     },
   },
   blockchainExplorerOpts: {
-    livenet: {
-      provider: 'insight',
-      url: 'https://insight.dashevo.org',
-      apiPrefix:'/insight-api-dash'
-    },
-    testnet: {
-      provider: 'insight',
-      url: 'https://testnet-insight.dashevo.org',
-      apiPrefix:'/insight-api-dash'
-      // url: 'https://test-insight.dash.org',
-      // url: 'http://localhost:3001',
-      // Multiple servers (in priority order)
-      // url: ['http://a.b.c', 'https://test-insight.bitpay.com:443'],
-    },
+    gbx: {
+      livenet: {
+        provider: 'insight',
+        url: 'https://insight.gobyte.network',
+        apiPrefix:'/insight-api-gobyte'
+      },
+      testnet: {
+        provider: 'insight',
+        url: 'https://tinsight.gobyte.network',
+        apiPrefix:'/insight-api-gobyte'
+      },
+    }
   },
   pushNotificationsOpts: {
     templatePath: './lib/templates',
     defaultLanguage: 'en',
-    defaultUnit: 'btc',
+    defaultUnit: 'gbx',
     subjectPrefix: '',
     pushServerUrl: 'https://fcm.googleapis.com/fcm',
     authorizationKey: '',
@@ -74,7 +72,7 @@ var config = {
   //  from: 'wallet-service@bitcore.io',
   //  templatePath: './lib/templates',
   //  defaultLanguage: 'en',
-  //  defaultUnit: 'btc',
+  //  defaultUnit: 'gbx',
   //  publicTxUrlTemplate: {
   //    livenet: 'https://insight.bitpay.com/tx/{{txid}}',
   //    testnet: 'https://test-insight.bitpay.com/tx/{{txid}}',
