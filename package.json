@@ -2,7 +2,7 @@
   "name": "bitcore-wallet-service-divi",
   "description": "A service for Mutisig HD Bitcoin Wallets",
   "author": "BitPay Inc",
-  "version": "2.3.4",
+  "version": "2.3.5",
   "licence": "MIT",
   "keywords": [
     "bitcoin",
