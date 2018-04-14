@@ -27,14 +27,14 @@ var config = {
   lockOpts: {
     //  To use locker-server, uncomment this:
     lockerServer: {
-      host: 'localhost',
+      host: '0.0.0.0',
       port: 3231,
     },
   },
   messageBrokerOpts: {
     //  To use message broker server, uncomment this:
     messageBrokerServer: {
-      url: 'http://localhost:3380',
+      url: 'http://0.0.0.0:3380',
     },
   },
   blockchainExplorerOpts: {
@@ -59,11 +59,23 @@ var config = {
         url: 'https://cashexplorer.bitcoin.com',
       },
     },
+    divi: {
+      livenet: {
+        provider: 'insight',
+        url: 'https://insight.diviproject.org',
+        apiPrefix: '/insight-api-divi'
+      },
+      testnet: {
+        provider: 'insight',
+        url: 'https://tinsight.diviproject.org',
+        apiPrefx: '/insight-api-divi'
+      }
+    }
   },
   pushNotificationsOpts: {
     templatePath: './lib/templates',
     defaultLanguage: 'en',
-    defaultUnit: 'btc',
+    defaultUnit: 'divi',
     subjectPrefix: '',
     pushServerUrl: 'https://fcm.googleapis.com/fcm',
     authorizationKey: '',
@@ -81,7 +93,7 @@ var config = {
   //  from: 'wallet-service@bitcore.io',
   //  templatePath: './lib/templates',
   //  defaultLanguage: 'en',
-  //  defaultUnit: 'btc',
+  //  defaultUnit: 'divi',
   //  publicTxUrlTemplate: {
   //    livenet: 'https://insight.bitpay.com/tx/{{txid}}',
   //    testnet: 'https://test-insight.bitpay.com/tx/{{txid}}',
