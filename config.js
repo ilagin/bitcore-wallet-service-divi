@@ -41,13 +41,13 @@ var config = {
     btc: {
       livenet: {
         provider: 'insight',
-        url: 'https://insight.dashevo.org:443',
-        apiPrefix:'/insight-api-dash'
+        url: 'https://insight.diviproject.org:443',
+        apiPrefix:'/insight-api-divi'
       },
       testnet: {
         provider: 'insight',
-        url: 'https://testnet-insight.dashevo.org:443',
-        apiPrefix:'/insight-api-dash'
+        url: 'https://testnet-insight.diviproject.org:443',
+        apiPrefix:'/insight-api-divi'
         // url: 'http://localhost:3001',
         // Multiple servers (in priority order)
         // url: ['http://a.b.c', 'https://test-insight.bitpay.com:443'],
