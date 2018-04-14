@@ -10,7 +10,7 @@ log.debug = log.verbose;
 log.disableColor();
 
 
-var port = process.env.BWS_PORT || config.port || 3232;
+var port = process.env.BWS_PORT || config.port || 1337;
 
 var cluster = require('cluster');
 var http = require('http');
