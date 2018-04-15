@@ -2,10 +2,10 @@
   "name": "bitcore-wallet-service-divi",
   "description": "A service for Mutisig HD Bitcoin Wallets",
   "author": "BitPay Inc",
-  "version": "2.3.6",
+  "version": "2.3.7",
   "licence": "MIT",
   "keywords": [
-    "bitcoin",
+    "GoByte",
     "copay",
     "multisig",
     "wallet",
@@ -54,7 +54,7 @@
     "socket.io-client": "^1.3.5",
     "sticky-session": "^0.1.0",
     "uuid": "*",
-    "webcoin-bitcoin": "dashevo/webcoin-dash"
+    "webcoin-gobyte": "gobytecoin/webcoin-gobyte"
   },
   "devDependencies": {
     "chai": "^1.9.1",

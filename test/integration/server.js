@@ -10,9 +10,9 @@ var log = require('npmlog');
 log.debug = log.verbose;
 log.level = 'info';
 
-var Bitcore = require('divicore-lib');
 var Bitcore_ = {
-  btc: Bitcore,
+  divi: require('divicore-lib'),
+  btc: require('divicore-lib'),
   bch: require('bitcore-lib-cash')
 };
 

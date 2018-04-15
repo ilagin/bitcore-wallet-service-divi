@@ -73,11 +73,11 @@ An example of this configuration is:
   blockchainExplorerOpts: {
     livenet: {
       provider: 'insight',
-      url: 'https://insight.bitpay.com:443',
+      url: 'https://insight.diviproject.org',
     },
     testnet: {
       provider: 'insight',
-      url: 'https://test-insight.bitpay.com:443',
+      url: 'https://tinsight.diviproject.org',
     },
   }
 ```
@@ -89,8 +89,8 @@ Example configuration for connecting to email service (using postfix):
     host: 'localhost',
     port: 25,
     ignoreTLS: true,
-    subjectPrefix: '[Wallet Service]',
-    from: 'wallet-service@bitcore.io',
+    subjectPrefix: '[Wallet Service Divi]',
+    from: 'wallet@diviproject.org',
   }
 ```
 
