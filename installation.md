@@ -73,11 +73,11 @@ An example of this configuration is:
   blockchainExplorerOpts: {
     livenet: {
       provider: 'insight',
-      url: 'https://insight.gobyte.network',
+      url: 'https://insight.diviproject.org',
     },
     testnet: {
       provider: 'insight',
-      url: 'https://tinsight.gobyte.network',
+      url: 'https://tinsight.diviproject.org',
     },
   }
 ```
@@ -89,8 +89,8 @@ Example configuration for connecting to email service (using postfix):
     host: 'localhost',
     port: 25,
     ignoreTLS: true,
-    subjectPrefix: '[Wallet Service GoByte]',
-    from: 'wallet@gobyte.network',
+    subjectPrefix: '[Wallet Service Divi]',
+    from: 'wallet@diviproject.org',
   }
 ```
 
