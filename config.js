@@ -38,27 +38,27 @@ var config = {
     },
   },
   blockchainExplorerOpts: {
-    btc: {
-      livenet: {
-        provider: 'insight',
-        url: 'https://insight.diviproject.org:443',
-        apiPrefix:'/insight-api-divi'
-      },
-      testnet: {
-        provider: 'insight',
-        url: 'https://testnet-insight.diviproject.org:443',
-        apiPrefix:'/insight-api-divi'
-        // url: 'http://localhost:3001',
-        // Multiple servers (in priority order)
-        // url: ['http://a.b.c', 'https://test-insight.bitpay.com:443'],
-      },
-    },
-    bch: {
-      livenet: {
-        provider: 'insight',
-        url: 'https://cashexplorer.bitcoin.com',
-      },
-    },
+    // btc: {
+    //   livenet: {
+    //     provider: 'insight',
+    //     url: 'https://insight.diviproject.org',
+    //     apiPrefix:'/insight-api-divi'
+    //   },
+    //   testnet: {
+    //     provider: 'insight',
+    //     url: 'https://testnet-insight.diviproject.org',
+    //     apiPrefix:'/insight-api-divi'
+    //     // url: 'http://localhost:3001',
+    //     // Multiple servers (in priority order)
+    //     // url: ['http://a.b.c', 'https://test-insight.bitpay.com:443'],
+    //   },
+    // },
+    // bch: {
+    //   livenet: {
+    //     provider: 'insight',
+    //     url: 'https://cashexplorer.bitcoin.com',
+    //   },
+    // },
     divi: {
       livenet: {
         provider: 'insight',
