@@ -12,9 +12,9 @@ var tingodb = require('tingodb')({
   memStore: true
 });
 
-var Bitcore = require('divicore-lib');
 var Bitcore_ = {
-  btc: Bitcore,
+  divi: require('divicore-lib'),
+  btc: require('divicore-lib'),
   bch: require('bitcore-lib-cash')
 };
 
